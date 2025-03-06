@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .row {
     max-width: $grid-width;
     margin: 0 auto;
@@ -9,7 +12,7 @@
             margin-bottom: $gutter-vertical-small;
         }
     }
-    
+
     @include respond(tab-port) {
         max-width: 50rem;
         padding: 0 3rem;
@@ -36,7 +39,7 @@
 
     .col-1-of-2 {
         width: calc((100% - #{$gutter-horizontal}) / 2);
-        
+
     }
 
     .col-1-of-3 {

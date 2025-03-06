@@ -1,4 +1,7 @@
+@use "../abstracts/variables" as *;
+
 .btn {
+
     &,
     &:link,
     &:visited {
@@ -15,24 +18,24 @@
         border: none;
         cursor: pointer;
     }
-    
+
     &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
 
         &::after {
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
         }
     }
-    
+
     &:active,
     &:focus {
         outline: none;
         transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     }
-    
+
     &--white {
         background-color: $color-white;
         color: $color-grey-dark;
@@ -50,7 +53,7 @@
             background-color: $color-primary;
         }
     }
-    
+
     &::after {
         content: "";
         display: inline-block;
@@ -63,7 +66,7 @@
         z-index: -1;
         transition: all .4s;
     }
-    
+
     &--animated {
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards;
@@ -71,6 +74,7 @@
 }
 
 .btn-text {
+
     &:link,
     &:visited {
         font-size: $default-font-size;
